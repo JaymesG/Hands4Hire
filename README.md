@@ -1,5 +1,5 @@
 # Hands4Hire
-A group project in which our team was tasked with creating a website that included a form that could filter results based on user input. Our idea was to create a website where users could hire cartoon escorts to accompany the user to certain parties and events (e.g. Birthday Party).
+A group project in which our team was tasked with creating a website which includes a form that could filter results based on user input. Our idea was to create a website where users could hire cartoon escorts to accompany the user to certain parties and events (e.g. Birthday Party).
 
 *To test this project save all files to a folder and open the index.html in a program that live updates (e.g. Brackets).
 
