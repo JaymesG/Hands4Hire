@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hands For Hire</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <script src="form.js"></script>
+  </head>
+  <body>
+    <form name="mainform" id="mainform" method="get" onsubmit="summarize(); return false;">
+    <header class="header">
+      <img src="H4H.png" alt="none">
+      <nav>
+        <ul>
+        <li><a href="Final.html">Home</a></li>
+        <li><a href="form.html">Hire</a></li>
+        <li><a href="EscortProfiles.html">Profiles</a></li>
+        <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+      <fieldset>
+        <legend>Customer Info</legend>
+        <label for="firstname" class="labelitem">First Name:</label>
+        <input type="text" name="firstname" id="firstname" size="24" maxlength="32" placeholder="Enter first name." required pattern="[a-zA-Z][a-z-A-Z'\- ]*" title="First name can not be blank." /><br />
+        <label for="lastname" class="labelitem">Last Name:</label>
+        <input type="text" name="lastname" id="lastname" size="24" maxlength="32"
+               placeholder="Enter last name." required pattern="[a-zA-Z][a-zA-Z'\- ]*"
+               title="Last name cannot be blank." /><br />
+        
+        <label for="eventdate" class="labelitem">Event Date:</label>
+        <input type="date" name="eventdate" id="eventdate" required/><br />
+      </fieldset>
+      <fieldset>
+          <legend>Escort Selection</legend>
+          <div class="dropdown">
+        <label for="event" class="labelitem2">What kind of party will you need an escort for?</label><br />
+        <select name="event" id="event" required>
+          <option value="" selected disabled>Choose an event</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Kids Birthday">Kid's Birthday</option>
+          <option value="Cocktail">Cocktail</option>
+        </select><br />
+        <label for="price" class="labelitem2">How much can you spend on an escort?</label><br />
+        <select name="price" id="price" required>
+          <option value="" selected disabled>Choose a price range</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select><br />
+        <label for="attire" class="labelitem2">What kind of attire should your escort wear?</label><br />
+        <select name="attire" id="attire" required>
+          <option value="" selected disabled>Choose a dress code</option>
+          <option value="Casual">Casual</option>
+          <option value="Formal">Formal</option>
+          <option value="Beach">Beach</option>
+          <option value="Costume">Costume</option>
+        </select><br />
+        <label for="transport" class="labelitem2">How would you like to arrive at your event?</label><br />
+        <select name="transport" id="transport" required>
+          <option value="" selected disabled>Choose a mode of transportation</option>
+          <option value="Personal">Personal Vehicle</option>
+          <option value="Uber">Uber</option>
+          <option value="Limo">Limo</option>
+          <option value="Helicopter">Helicopter</option>
+              </select><br />
+        
+        <div class="labelitem2">What gift/s should your escort bring?</div>
+        <div class="labelitem">
+          <label for="giftwrap" class="labelitem">Gift Wrap: </label>
+        </div>
+        <div class="inputitem">
+        <input type="color" name="giftwrap" id="giftwrap" /><br />
+        </div><br />
+        <div class="inputitem">
+          <input type="checkbox" name="gifts[]" id="toy" value="Toy" />
+          <label for="toy">Toy</label><br />
+          <input type="checkbox" name="gifts[]" id="card" value="Card" />
+          <label for="card">Card</label><br />
+          <input type="checkbox" name="gifts[]" id="booze" value="Booze" />
+          <label for="booze">Booze</label><br />
+          <input type="checkbox" name="gifts[]" id="appliance" value="Appliance" />
+          <label for="appliance">Appliance</label><br /><br />
+        </div>
+        
+        <div class="labelitem2">What gender do you prefer for your escort?</div>
+        <div class="inputitem">
+          <input type="radio" name="gender" id="male" value="Male" checked />
+          <label for="male">Male</label><br />
+          <input type="radio" name="gender" id="female" value="Female" />
+          <label for="female">Female</label><br />
+        </div><br />
+        </div>
+      </fieldset>
+      
+      
+      <section id="reset_submit">
+        <input type="reset" value="Reset" onclick="reset_form()" />
+        
+        
+        <input type="submit" value="Submit" />
+      </section><br />
+      <div id="summary_wrapper">
+        <fieldset>
+        <legend>Summary</legend>
+          <section id= "summary" class="summarytext"></section>
+        </fieldset>
+      </div>
+    </form>
+  </body>
+</html>
